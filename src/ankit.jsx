@@ -258,7 +258,7 @@ export default function Portfolio() {
                   
                   <div className="relative w-full h-full rounded-[2rem] overflow-hidden border border-gray-200 dark:border-white/10 shadow-2xl z-10 group bg-white dark:bg-black">
                     {/* IMAGE - Make sure profile.png is in the public folder */}
-                    <img src="./profile.png" alt="Ankit" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                    <img src="../profile.png" alt="Ankit" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
                     
                     <div className="absolute bottom-6 left-6 right-6 bg-white/80 dark:bg-white/10 backdrop-blur-md border border-white/20 p-4 rounded-xl shadow-lg">
                         <div className="flex items-center gap-3">
