@@ -55,6 +55,7 @@ export default function Portfolio() {
     }
   };
 
+  // --- UPDATED PROJECTS WITH LINKS ---
   const projects = [
     {
       title: "Pulselyx",
@@ -62,7 +63,8 @@ export default function Portfolio() {
       description: "An AI-enabled health analytics platform that ingests health reports and delivers actionable insights.",
       tech: ["TypeScript", "JavaScript", "REST APIs", "AI/ML"],
       gradient: "from-violet-600 via-purple-600 to-fuchsia-600",
-      bgGradient: "from-violet-500/10 via-purple-500/10 to-fuchsia-500/10"
+      bgGradient: "from-violet-500/10 via-purple-500/10 to-fuchsia-500/10",
+      link: "https://github.com/Ankit14gg/Pulselyx" // Update this if your repo name is different
     },
     {
       title: "Farm Click",
@@ -70,7 +72,8 @@ export default function Portfolio() {
       description: "User-friendly Android application enabling farmers to list agricultural tools for rent.",
       tech: ["Java", "Android", "Firebase"],
       gradient: "from-emerald-600 via-teal-600 to-cyan-600",
-      bgGradient: "from-emerald-500/10 via-teal-500/10 to-cyan-500/10"
+      bgGradient: "from-emerald-500/10 via-teal-500/10 to-cyan-500/10",
+      link: "https://github.com/Ankit14gg/Farm-Click" // Update this if your repo name is different
     }
   ];
 
@@ -228,7 +231,7 @@ export default function Portfolio() {
                     Let's Talk <ArrowRight className="group-hover:translate-x-1 transition-transform" size={20} />
                   </a>
                   
-                  {/* --- UPDATED RESUME LINK --- */}
+                  {/* Resume Link */}
                   <a 
                     href="https://drive.google.com/file/d/1jF5ILmomlJ2EVRWGpcNMEjL6XRSEeIcq/view?usp=sharing" 
                     target="_blank" 
@@ -258,7 +261,7 @@ export default function Portfolio() {
                   
                   <div className="relative w-full h-full rounded-[2rem] overflow-hidden border border-gray-200 dark:border-white/10 shadow-2xl z-10 group bg-white dark:bg-black">
                     {/* IMAGE - Make sure profile.png is in the public folder */}
-                    <img src="https://avatars.githubusercontent.com/u/179602460?v=4" alt="Ankit" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                    <img src="profile.png" alt="Ankit" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
                     
                     <div className="absolute bottom-6 left-6 right-6 bg-white/80 dark:bg-white/10 backdrop-blur-md border border-white/20 p-4 rounded-xl shadow-lg">
                         <div className="flex items-center gap-3">
@@ -266,8 +269,8 @@ export default function Portfolio() {
                             <Code size={20} />
                           </div>
                           <div>
-                            <p className="text-gray-900 dark:text-black-900 font-bold">Ankit Saha</p>
-                            <p className="text-xs text-gray-900 dark:text-black-900 font-bold">Full Stack Developer</p>
+                            <p className="text-gray-900 dark:text-white font-bold">Ankit Saha</p>
+                            <p className="text-xs text-gray-600 dark:text-gray-300">Full Stack Developer</p>
                           </div>
                         </div>
                     </div>
@@ -287,7 +290,6 @@ export default function Portfolio() {
                <div className="w-24 h-1 bg-gradient-to-r from-purple-500 to-cyan-500 mx-auto rounded-full"></div>
             </div>
             
-            {/* 2 Items (Education, Location) Centered */}
             <div className="grid md:grid-cols-2 gap-6 mb-8 max-w-4xl mx-auto">
               {[
                 { icon: <GraduationCap size={28} />, title: "Education", text: "B.Tech CSE", sub: "Ajeenkya D Y Patil University" },
@@ -371,9 +373,15 @@ export default function Portfolio() {
                       ))}
                     </div>
                     
-                    <button className={`flex items-center gap-2 text-sm font-bold uppercase tracking-wider text-transparent bg-gradient-to-r ${project.gradient} bg-clip-text group-hover:gap-3 transition-all`}>
+                    {/* --- UPDATED LINK BUTTON --- */}
+                    <a 
+                      href={https://github.com/Ankit14gg}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={`flex items-center gap-2 text-sm font-bold uppercase tracking-wider text-transparent bg-gradient-to-r ${project.gradient} bg-clip-text group-hover:gap-3 transition-all cursor-pointer`}
+                    >
                       View Details <ArrowRight size={16} className={`text-purple-500`} />
-                    </button>
+                    </a>
                   </div>
                 </div>
               ))}
@@ -392,91 +400,4 @@ export default function Portfolio() {
                   <div className="flex items-center justify-between mb-4">
                     <div className="flex items-center gap-4">
                       <span className="text-3xl">{skill.icon}</span>
-                      <span className="font-bold text-lg text-gray-900 dark:text-white">{skill.name}</span>
-                    </div>
-                    <span className="font-mono text-gray-500 dark:text-gray-400">{skill.level}%</span>
-                  </div>
-                  <div className="w-full bg-gray-200 dark:bg-black/50 rounded-full h-3 overflow-hidden">
-                    <div
-                      className={`h-full bg-gradient-to-r ${skill.color} rounded-full transition-all duration-1000 ease-out group-hover:scale-x-105`}
-                      style={{ width: `${skill.level}%` }}
-                    ></div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* --- EXPERIENCE SECTION --- */}
-        <section className="relative py-20 px-6 bg-gray-50 dark:bg-black/20">
-          <div className="max-w-5xl mx-auto relative z-10">
-            <h3 className="text-4xl md:text-5xl font-bold mb-16 text-center text-gray-900 dark:text-white">Work Experience</h3>
-            
-            <div className="space-y-8 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-purple-500 before:to-transparent before:opacity-20">
-              {experience.map((exp, index) => (
-                <div key={index} className="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
-                  
-                  {/* Timeline Dot */}
-                  <div className="absolute top-0 left-0 w-10 h-10 rounded-full border-4 border-white dark:border-[#0a0a0a] bg-gradient-to-r from-purple-500 to-cyan-500 md:left-1/2 md:-translate-x-1/2 flex items-center justify-center z-10 shadow-lg">
-                     <div className="w-2 h-2 bg-white rounded-full"></div>
-                  </div>
-                  
-                  {/* Card */}
-                  <div className="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-white dark:bg-white/5 border border-gray-200 dark:border-white/10 rounded-2xl p-8 ml-auto md:ml-0 shadow-lg dark:shadow-none hover:-translate-y-1 transition-transform">
-                    <div className="flex flex-col gap-2 mb-4">
-                      <div className="flex justify-between items-start">
-                          <div className="w-10 h-10 bg-gray-100 dark:bg-white/10 rounded-lg flex items-center justify-center text-xl mb-2">
-                              {exp.icon}
-                          </div>
-                          <span className="bg-purple-100 dark:bg-purple-500/20 text-purple-600 dark:text-purple-200 px-3 py-1 rounded-full text-xs font-bold">
-                              {exp.period}
-                          </span>
-                      </div>
-                      <h4 className="text-xl font-bold text-gray-900 dark:text-white">{exp.role}</h4>
-                      <p className="text-gray-500 dark:text-gray-400 font-medium">{exp.company}</p>
-                    </div>
-                    {exp.description && (
-                      <p className="text-gray-600 dark:text-gray-300 text-sm border-t border-gray-100 dark:border-white/5 pt-4 mt-2">{exp.description}</p>
-                    )}
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* --- CONTACT & FOOTER --- */}
-        <footer className="relative bg-white dark:bg-black border-t border-gray-200 dark:border-white/10 pt-20 pb-10 px-6">
-          <div className="max-w-4xl mx-auto text-center relative z-10 mb-20">
-            <h3 className="text-4xl md:text-5xl font-bold mb-6 text-gray-900 dark:text-white">Let's Connect</h3>
-            <p className="text-xl text-gray-500 dark:text-gray-400 mb-12">
-              Open to new projects and opportunities.
-            </p>
-            
-            <div className="flex justify-center gap-8">
-              {[
-                { icon: <Mail size={24} />, href: "mailto:ankit200314@gmail.com", label: "Email" },
-                { icon: <Linkedin size={24} />, href: "https://linkedin.com/in/ankitgg14", label: "LinkedIn" },
-                { icon: <Github size={24} />, href: "https://github.com/Ankit14gg", label: "Github" }
-              ].map((item, i) => (
-                <a key={i} href={item.href} className="flex flex-col items-center gap-2 text-gray-500 dark:text-gray-400 hover:text-purple-600 dark:hover:text-purple-400 transition-colors group">
-                  <div className="w-16 h-16 bg-gray-100 dark:bg-white/5 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
-                    {item.icon}
-                  </div>
-                  <span className="font-medium">{item.label}</span>
-                </a>
-              ))}
-            </div>
-          </div>
-          
-          <div className="max-w-7xl mx-auto border-t border-gray-200 dark:border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-             <p className="text-gray-500 text-sm">© 2026 Ankit Saha. All rights reserved.</p>
-             
-          </div>
-        </footer>
-
-      </div>
-    </div>
-  );
-}
+                      <span className="font-bold text-lg text-gray-900
