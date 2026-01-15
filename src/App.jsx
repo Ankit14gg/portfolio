@@ -1,4 +1,4 @@
-import Portfolio from '../ankit.jsx'
+import Portfolio from './ankit.jsx'
 
 function App() {
   return <Portfolio />
