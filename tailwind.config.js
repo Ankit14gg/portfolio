@@ -1,9 +1,9 @@
 /** @type {import('tailwindcss').Config} */
 export default {
+  darkMode: 'class', // <--- THIS LINE MAKES THE BUTTON WORK
   content: [
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
-    "./ankit.jsx",
   ],
   theme: {
     extend: {},
