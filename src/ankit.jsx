@@ -267,7 +267,7 @@ export default function Portfolio() {
                           </div>
                           <div>
                             <p className="text-gray-900 dark:text-black-900 font-bold">Ankit Saha</p>
-                            <p className="text-xs text-gray-600 dark:text-black-900">Full Stack Developer</p>
+                            <p className="text-xs text-gray-900 dark:text-black-900 font-bold">Full Stack Developer</p>
                           </div>
                         </div>
                     </div>
